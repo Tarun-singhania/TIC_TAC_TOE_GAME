@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@300;400&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin:0;
+  padding:0
+}
+/* CSS for Header */
+.mainContainer{
+  min-height: 100vh;
+}
+nav div h3{
+  text-align: center;
+}
+nav{
+  background-color: rgb(137, 23, 36);
+  color:white;
+  height:50px;
+  padding:0 20px;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul{
+  list-style-type: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+nav ul li a{
+  text-decoration: none;
+  color: white;
+}
+nav div{
+  display: flex;
+  gap:5px;
+}
+.musicBtn{
+  padding:4px 10px;
+  background-color:darkcyan;
+  color:white;
+  border:none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* CSS for box filling */
+.gameContainer{
+  display:flex;
+  justify-content: space-around;
+  margin:40px 0;
+}
+.container{
+  display: grid;
+  grid-template-columns: repeat(3,120px);
+  grid-template-rows: repeat(3,120px);
+}
+.box{
+  border:2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.box:hover{
+  background-color: rgb(255, 236, 255);
+}
+.boxText{
+  font-size:60px;
+}
+.br-0{
+  border-right: 0;
+}
+.bl-0{
+  border-left: 0;
+}
+.bt-0{
+  border-top: 0;
+}
+.bb-0{
+  border-bottom: 0;
+}
+
+/* CSS for Match result */
+.imgBox img{
+  width:0;
+  transition: width 2s ease-in-out;
+  margin-bottom: 10px;
+}
+.gameInfo{
+  display: flex;
+  flex-direction: column;
+  gap:15px;
+  align-items: center;
+  justify-content: center;
+}
+.gameInfo h1{
+  color: rgb(12, 161, 77);
+  text-align: center;
+}
+.info{
+  display: block;
+  font-size: 28px;
+  color:red;
+  font-family: 'Montserrat', sans-serif;
+}
+#reset{
+  padding:10px 120px;
+  font-size: 24px;
+  font-weight: bolder;
+  background-color: blueviolet;
+  color: white;
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+}
+
+/* CSS for author */
+.author{
+  background-color:aquamarine;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.author h1{
+  font-size: 100px;
+  color: red;
+}
+
+/* CSS for responsive website */
+@media (max-width:915px){
+  .container{
+    grid-template-columns: repeat(3,90px);
+    grid-template-rows: repeat(3,90px);
+  }
+}
+@media (max-width:850px){
+  .gameContainer{
+    flex-direction: column-reverse;
+  }
+  .gameInfo{
+    margin-top: 30px;
+  }
+  .container{
+    margin:0 auto;
+  }
+  .author h1{
+    font-size: 80px;
+  }
+}
+@media (max-width:720px){
+  nav{
+    height:65px;
+    flex-direction: column;
+  }
+  nav div{
+    margin-bottom: 7px;
+  }
+  .author h1{
+    font-size: 55px;
+  }
+}
+@media (max-width:470px){
+  .gameInfo h1{
+    font-size: 26px;
+  }
+  .author h1{
+    font-size: 40px;
+  }
+}
+@media (max-width:376px){
+  .gameInfo h1{
+    font-size: 22px;
+  }
+  nav ul li{
+    font-size:16px;
+    margin-top: 3px;
+  }
+  .container{
+    grid-template-columns: repeat(3,80px);
+    grid-template-rows: repeat(3,80px);
+  }
+}
+@media (max-width:300px){
+  .mainContainer{
+    font-size: 12px;
+  }
+  .container{
+    grid-template-columns: repeat(3,80px);
+    grid-template-rows: repeat(3,80px);
+  }
+  .gameInfo h1,
+  .info{
+    font-size: 16px;
+  }
+  #reset{
+    font-size: 12px;
+    padding: 10px 80px;
+  }
+  .author h1{
+    font-size:30px;
+  }
+  nav ul li{
+    font-size:12px;
+    margin-top: 3px;
+  }
+}
